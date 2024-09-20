@@ -5,6 +5,61 @@ struct administrador
     char *senha;
 };
 
+void texto_menu_adm()
+{
+    printf("\tAQUELE MERCADINHO LA\n\n");
+    printf("\t\tMENU ADMINISTRADOR\n\n");
+    printf("1 - Cadastrar produto\n");
+    printf("2 - Ver produtos\n");
+    printf("3 - Editar produto\n");
+    printf("4 - Excluir produto\n");
+    printf("5 - Editar um usuario\n");
+    printf("6 - Excluir um usuario\n");
+    printf("7 - Listar usuarios\n");
+    printf("0 - Sair\n");
+}
+
+void menu_adm()
+{
+    int op;
+    do
+    {
+        texto_menu_adm();
+        scanf("%i", &op);
+
+        switch (op)
+        {
+        case 1:
+            realizar_cadastro_produto();
+            break;
+        case 2:
+            listar_produtos();
+            break;
+        case 3:
+            editar_produto();
+            break;
+        case 4:
+            remover_produto();
+            break;
+        case 5:
+            editar_usuario();
+            break;
+        case 6:
+            excluir_usuario();
+            break;
+        case 7:
+            listar_usuarios();
+        case 0:
+            system("cls");
+            printf("Obrigado por utilizar nossos servicos!\n");
+            break;
+        default:
+            break;
+        }
+
+    } while (op != 0);
+}
+
 void realizar_login_adm()
 {
     char *nome = (char *)malloc(30 * sizeof(char));
@@ -21,6 +76,7 @@ void realizar_login_adm()
         if ((strcmp(usuario->nome, nome) && strcmp(usuario->senha, senha)) == 0)
         {
             printf("Logado com sucesso!\n");
+            menu_adm();
         }
         else
         {

@@ -1,9 +1,18 @@
-nome do produto: feijao 
-valor: 14.65
-ID: 89621
+nome do produto: tenis
+valor: 14.00
+ID: 2
+nome do produto: tenis
+valor: 12.00
+ID: 6
+nome do produto: it
+valor: 9.00
+ID: 9021
 nome do produto: arroz
 valor: 14.00
 ID: 89611
+nome do produto: feijao 
+valor: 14.65
+ID: 89621
 nome do produto: macarrao 
 valor: 14.12
 ID: 89623
